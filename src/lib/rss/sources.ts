@@ -25,7 +25,23 @@ export const RSS_SOURCES: RSSSource[] = [
     category: 'company',
     icon: 'science',
   },
-  // 4. Core Frameworks
+  // 4. ML Papers (arXiv)
+  {
+    id: 'arxiv-ml',
+    name: 'arXiv ML',
+    url: 'http://export.arxiv.org/rss/cs.LG',
+    category: 'media',
+    icon: 'description',
+  },
+  // 5. LLM Papers (arXiv)
+  {
+    id: 'arxiv-nlp',
+    name: 'arXiv NLP',
+    url: 'http://export.arxiv.org/rss/cs.CL',
+    category: 'media',
+    icon: 'article',
+  },
+  // 6. Core Frameworks
   {
     id: 'meta',
     name: 'Meta Engineering',

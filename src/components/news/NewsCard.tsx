@@ -53,6 +53,17 @@ const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: str
     icon: '☁️',
     iconBg: 'bg-orange-500/20',
   },
+  // arXiv Papers
+  'arxiv-ml': {
+    gradient: 'from-red-600/20 to-orange-500/10',
+    icon: '📑',
+    iconBg: 'bg-red-600/20',
+  },
+  'arxiv-nlp': {
+    gradient: 'from-indigo-600/20 to-purple-500/10',
+    icon: '📝',
+    iconBg: 'bg-indigo-600/20',
+  },
   // Developer Community
   hackernews: {
     gradient: 'from-orange-500/20 to-amber-500/10',
