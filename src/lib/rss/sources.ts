@@ -1,15 +1,7 @@
 import type { RSSSource } from '@/types';
 
 export const RSS_SOURCES: RSSSource[] = [
-  // 1. Developer Trends
-  {
-    id: 'hackernews',
-    name: 'Hacker News',
-    url: 'https://hnrss.org/frontpage',
-    category: 'media',
-    icon: 'trending_up',
-  },
-  // 2. AI Frontier
+  // 1. AI Frontier
   {
     id: 'openai',
     name: 'OpenAI',
@@ -57,15 +49,7 @@ export const RSS_SOURCES: RSSSource[] = [
     category: 'company',
     icon: 'sentiment_satisfied',
   },
-  // 6. Open Source Ecosystem
-  {
-    id: 'github',
-    name: 'GitHub Blog',
-    url: 'https://github.blog/feed/',
-    category: 'media',
-    icon: 'hub',
-  },
-  // 7. Technical Community
+  // 6. Technical Community
   {
     id: 'lobsters',
     name: 'Lobsters',
