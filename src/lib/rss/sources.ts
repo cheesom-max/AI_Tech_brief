@@ -5,7 +5,7 @@ export const RSS_SOURCES: RSSSource[] = [
   {
     id: 'anthropic',
     name: 'Anthropic News',
-    url: 'https://www.anthropic.com/rss/news.xml',
+    url: 'https://raw.githubusercontent.com/conoro/anthropic-engineering-rss-feed/main/anthropic_engineering_rss.xml',
     category: 'company',
     icon: 'auto_awesome',
   },
