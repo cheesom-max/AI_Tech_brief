@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { v4 as uuidv4 } from 'uuid';
 import { format } from 'date-fns';
 import { fetchAllFeeds } from '@/lib/rss/parser';
+import { getContentForSummary } from '@/lib/rss/fetcher';
 import { generateSummary, generateInsight, translateTitle } from '@/lib/ai/summarizer';
 import { saveNews, saveBriefing, checkNewsExists } from '@/lib/db/queries';
 import { initializeDatabase } from '@/lib/db/client';
@@ -96,11 +97,14 @@ export async function GET(request: NextRequest) {
         continue;
       }
 
+      // Get sufficient content for summarization (fetch from URL if needed)
+      const contentForAI = await getContentForSummary(item.content, item.link);
+
       // Generate AI translation, summary and insight
       const [translatedTitle, summary, insight] = await Promise.all([
         translateTitle(item.title),
-        generateSummary(item.content),
-        generateInsight(item.content),
+        generateSummary(contentForAI),
+        generateInsight(contentForAI),
       ]);
 
       const newsId = uuidv4();
