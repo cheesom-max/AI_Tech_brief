@@ -55,7 +55,9 @@
       "WebFetch(domain:rss.arxiv.org)",
       "WebFetch(domain:paperswithcode.com)",
       "WebFetch(domain:arxiv.org)",
-      "WebFetch(domain:export.arxiv.org)"
+      "WebFetch(domain:export.arxiv.org)",
+      "Bash(npm run lint)",
+      "Bash(npx vercel:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
@@ -63,5 +65,6 @@
     "google-search",
     "sequential-thinking",
     "filesystem"
-  ]
+  ],
+  "outputStyle": "Learning"
 }

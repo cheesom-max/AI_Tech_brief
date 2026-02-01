@@ -16,6 +16,12 @@ npm test               # Run all tests
 npm run test:watch     # Watch mode for single test development
 npm run test:coverage  # Coverage report
 npm run lint           # ESLint check
+
+# Run single test file
+npm test -- src/lib/rss/sources.test.ts
+
+# Deploy to production
+npx vercel --prod
 ```
 
 ## Architecture
@@ -33,8 +39,32 @@ Gemini AI (translate → summarize → insight)
     ↓
 Supabase PostgreSQL
     ↓
-React Components (SSR + Client)
+React Components (SSR + Client hydration)
 ```
+
+## SSR/Hybrid Rendering Pattern
+
+Pages use Server Components for initial data fetch, Client Components for interactivity:
+
+```
+Server Component (page.tsx)          Client Component (*Content.tsx)
+├── Fetches data from DB             ├── Receives initialData as props
+├── Generates SEO metadata           ├── Handles user interactions
+└── Returns <ClientComponent />      └── Client-side fetches for filters/pagination
+```
+
+**Key files:**
+- `src/app/page.tsx` → Server Component → `HomeContent.tsx` (client)
+- `src/app/news/[id]/page.tsx` → Server Component with `generateMetadata()`
+- `src/app/archive/page.tsx` → Server Component → `ArchiveContent.tsx` (client)
+
+## Theme Management
+
+Theme uses blocking script pattern to prevent flash:
+1. Server renders `<html className="dark">` (default dark mode)
+2. Blocking script in `<head>` checks `localStorage.getItem('theme')`
+3. If `'light'`, removes `dark` class before paint
+4. `ThemeToggle` component syncs React state with DOM class
 
 ## Key Directories
 
@@ -44,13 +74,13 @@ src/
 │   ├── api/cron/collect/   # Daily RSS collection endpoint
 │   ├── api/news/           # News list/detail API
 │   ├── api/archive/        # Briefing archive API
-│   ├── news/[id]/          # News detail page
+│   ├── news/[id]/          # News detail page (SSR + generateMetadata)
 │   └── archive/            # Archive timeline page
 ├── components/
-│   ├── layout/             # Header, BottomNav
-│   ├── home/               # HeroNews, CategoryFilter, NewsList
+│   ├── layout/             # Header, BottomNav, ThemeToggle
+│   ├── home/               # HeroNews, CategoryFilter, NewsList, HomeContent
 │   ├── news/               # NewsCard, NewsDetail, AISummary, AIInsight
-│   └── archive/            # ArchiveTimeline
+│   └── archive/            # ArchiveTimeline, ArchiveContent
 ├── lib/
 │   ├── rss/
 │   │   ├── sources.ts      # RSS source definitions (10 sources)
@@ -60,8 +90,7 @@ src/
 │   │   └── summarizer.ts   # Gemini AI prompts (translate, summarize, insight)
 │   └── db/
 │       ├── client.ts       # Supabase client
-│       ├── queries.ts      # Database operations
-│       └── schema.ts       # Table initialization
+│       └── queries.ts      # Database operations
 └── types/                  # TypeScript interfaces
 ```
 
@@ -100,7 +129,7 @@ RSS 내용이 200자 미만이면 `fetcher.ts`가 원본 URL에서 전체 기사
 ## UI Patterns
 
 - Mobile-first: `max-w-md` (448px)
-- Dark mode only (hardcoded in layout.tsx)
+- Dark/Light theme toggle with localStorage persistence
 - Source-specific gradients in NewsCard/HeroNews
 - Client components use `'use client'` directive
 

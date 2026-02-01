@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { ko } from 'date-fns/locale';
