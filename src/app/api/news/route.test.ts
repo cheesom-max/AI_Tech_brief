@@ -63,16 +63,14 @@ describe('GET /api/news', () => {
     expect(getNewsByDate).toHaveBeenCalledWith('2024-01-15', undefined, 20, 0);
   });
 
-  it('should use today date when date not provided', async () => {
+  it('should return all news when date not provided', async () => {
     (getNewsByDate as jest.Mock).mockResolvedValue([]);
     (getTotalNewsCount as jest.Mock).mockResolvedValue(0);
 
     const request = new NextRequest('http://localhost:3000/api/news');
     await GET(request);
 
-    // Should be called with today's date
-    expect(getNewsByDate).toHaveBeenCalled();
-    const callArgs = (getNewsByDate as jest.Mock).mock.calls[0];
-    expect(callArgs[0]).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    // Should be called with undefined date (returns all news)
+    expect(getNewsByDate).toHaveBeenCalledWith(undefined, undefined, 20, 0);
   });
 });

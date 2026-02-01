@@ -132,8 +132,8 @@ describe('RSS Parser', () => {
       const { fetchAllFeeds } = require('./parser');
       const result = await fetchAllFeeds();
 
-      // Should have called parseURL for each RSS source (8 sources)
-      expect(mockParseURL).toHaveBeenCalledTimes(8);
+      // Should have called parseURL for each RSS source (10 sources)
+      expect(mockParseURL).toHaveBeenCalledTimes(10);
       // Result should contain items (deduplicated, so at least 1)
       expect(result.length).toBeGreaterThanOrEqual(1);
     });
