@@ -11,24 +11,33 @@ interface HeroNewsProps {
 
 // Source-specific styles
 const sourceStyles: Record<string, { gradient: string; icon: string }> = {
-  // New sources
-  anthropic: { gradient: 'from-orange-500/30 to-amber-500/10', icon: '🔶' },
-  openai: { gradient: 'from-emerald-500/30 to-teal-500/10', icon: '🤖' },
-  google: { gradient: 'from-blue-500/30 to-indigo-500/10', icon: '🔍' },
+  // Big Tech Engineering
+  netflix: { gradient: 'from-red-600/30 to-red-500/10', icon: '🎬' },
+  uber: { gradient: 'from-gray-800/30 to-gray-600/10', icon: '🚗' },
+  google: { gradient: 'from-blue-500/30 to-indigo-500/10', icon: '🔬' },
+  meta: { gradient: 'from-blue-600/30 to-cyan-500/10', icon: '👨‍💻' },
+  // AI & ML
   huggingface: { gradient: 'from-yellow-500/30 to-orange-500/10', icon: '🤗' },
-  bair: { gradient: 'from-blue-600/30 to-cyan-500/10', icon: '🔬' },
-  aheadofai: { gradient: 'from-purple-500/30 to-pink-500/10', icon: '🧠' },
-  ainews: { gradient: 'from-sky-500/30 to-blue-500/10', icon: '📰' },
-  kdnuggets: { gradient: 'from-indigo-500/30 to-violet-500/10', icon: '📊' },
-  tds: { gradient: 'from-teal-500/30 to-emerald-500/10', icon: '📈' },
-  venturebeat: { gradient: 'from-red-500/30 to-orange-500/10', icon: '🚀' },
-  // Legacy sources (for existing news data)
+  openai: { gradient: 'from-emerald-500/30 to-teal-500/10', icon: '🤖' },
+  mlmastery: { gradient: 'from-purple-500/30 to-pink-500/10', icon: '🎓' },
+  gradient: { gradient: 'from-indigo-500/30 to-violet-500/10', icon: '📊' },
+  // Developer Community
+  hackernews: { gradient: 'from-orange-500/30 to-amber-500/10', icon: '🔥' },
+  github: { gradient: 'from-gray-600/30 to-gray-500/10', icon: '🐙' },
+  // Legacy sources
+  anthropic: { gradient: 'from-orange-500/30 to-amber-500/10', icon: '🔶' },
   deepmind: { gradient: 'from-purple-500/30 to-pink-500/10', icon: '🧠' },
   nvidia: { gradient: 'from-green-500/30 to-lime-500/10', icon: '💻' },
   techcrunch: { gradient: 'from-green-600/30 to-emerald-500/10', icon: '📰' },
   verge: { gradient: 'from-pink-500/30 to-rose-500/10', icon: '⚡' },
   mit: { gradient: 'from-red-600/30 to-rose-500/10', icon: '🎓' },
   wired: { gradient: 'from-gray-500/30 to-slate-500/10', icon: '🔌' },
+  bair: { gradient: 'from-blue-600/30 to-cyan-500/10', icon: '🔬' },
+  aheadofai: { gradient: 'from-purple-500/30 to-pink-500/10', icon: '🧠' },
+  ainews: { gradient: 'from-sky-500/30 to-blue-500/10', icon: '📰' },
+  kdnuggets: { gradient: 'from-indigo-500/30 to-violet-500/10', icon: '📊' },
+  tds: { gradient: 'from-teal-500/30 to-emerald-500/10', icon: '📈' },
+  venturebeat: { gradient: 'from-red-500/30 to-orange-500/10', icon: '🚀' },
   default: { gradient: 'from-primary/30 to-primary/5', icon: '📄' },
 };
 

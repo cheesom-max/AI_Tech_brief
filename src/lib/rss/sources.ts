@@ -1,13 +1,42 @@
 import type { RSSSource } from '@/types';
 
 export const RSS_SOURCES: RSSSource[] = [
-  // AI Company Blogs
+  // Big Tech Engineering Blogs
   {
-    id: 'anthropic',
-    name: 'Anthropic',
-    url: 'https://raw.githubusercontent.com/conoro/anthropic-engineering-rss-feed/main/anthropic_engineering_rss.xml',
+    id: 'netflix',
+    name: 'Netflix Tech',
+    url: 'https://netflixtechblog.com/feed',
     category: 'company',
-    icon: 'auto_awesome',
+    icon: 'play_circle',
+  },
+  {
+    id: 'uber',
+    name: 'Uber Engineering',
+    url: 'https://www.uber.com/en-US/blog/engineering/rss/',
+    category: 'company',
+    icon: 'local_taxi',
+  },
+  {
+    id: 'google',
+    name: 'Google Research',
+    url: 'https://research.google/blog/rss',
+    category: 'company',
+    icon: 'science',
+  },
+  {
+    id: 'meta',
+    name: 'Meta Engineering',
+    url: 'https://engineering.fb.com/feed/',
+    category: 'company',
+    icon: 'code',
+  },
+  // AI & ML Implementation
+  {
+    id: 'huggingface',
+    name: 'Hugging Face',
+    url: 'https://huggingface.co/blog/feed.xml',
+    category: 'company',
+    icon: 'sentiment_satisfied',
   },
   {
     id: 'openai',
@@ -17,61 +46,33 @@ export const RSS_SOURCES: RSSSource[] = [
     icon: 'smart_toy',
   },
   {
-    id: 'google',
-    name: 'Google AI',
-    url: 'https://blog.google/technology/ai/rss/',
-    category: 'company',
-    icon: 'psychology',
+    id: 'mlmastery',
+    name: 'ML Mastery',
+    url: 'https://machinelearningmastery.com/feed/',
+    category: 'media',
+    icon: 'school',
   },
   {
-    id: 'huggingface',
-    name: 'Hugging Face',
-    url: 'https://huggingface.co/blog/feed.xml',
-    category: 'company',
-    icon: 'sentiment_satisfied',
-  },
-  {
-    id: 'bair',
-    name: 'BAIR Blog',
-    url: 'https://bair.berkeley.edu/blog/feed.xml',
-    category: 'company',
-    icon: 'science',
-  },
-  // AI Research & Analysis
-  {
-    id: 'aheadofai',
-    name: 'Ahead of AI',
-    url: 'https://magazine.sebastianraschka.com/feed',
+    id: 'gradient',
+    name: 'The Gradient',
+    url: 'https://thegradient.pub/rss/',
     category: 'media',
     icon: 'insights',
   },
+  // Developer Community
   {
-    id: 'ainews',
-    name: 'AI News',
-    url: 'https://www.artificialintelligence-news.com/feed/',
-    category: 'media',
-    icon: 'newspaper',
-  },
-  {
-    id: 'kdnuggets',
-    name: 'KDnuggets',
-    url: 'https://www.kdnuggets.com/feed',
-    category: 'media',
-    icon: 'analytics',
-  },
-  {
-    id: 'tds',
-    name: 'Towards Data Science',
-    url: 'https://towardsdatascience.com/feed',
-    category: 'media',
-    icon: 'data_usage',
-  },
-  {
-    id: 'venturebeat',
-    name: 'VentureBeat AI',
-    url: 'https://venturebeat.com/category/ai/feed/',
+    id: 'hackernews',
+    name: 'Hacker News',
+    url: 'https://news.ycombinator.com/rss',
     category: 'media',
     icon: 'trending_up',
+  },
+  {
+    id: 'github',
+    name: 'GitHub Blog',
+    url: 'https://github.blog/feed/',
+    category: 'media',
+    icon: 'hub',
   },
 ];
 

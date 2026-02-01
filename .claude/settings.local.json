@@ -31,7 +31,16 @@
       "WebFetch(domain:aitechbrief.site)",
       "Bash(gh repo view:*)",
       "Bash(gh api:*)",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:bair.berkeley.edu)",
+      "WebFetch(domain:blog.google)",
+      "WebFetch(domain:magazine.sebastianraschka.com)",
+      "WebFetch(domain:www.artificialintelligence-news.com)",
+      "WebFetch(domain:www.kdnuggets.com)",
+      "WebFetch(domain:towardsdatascience.com)"
     ]
   },
   "enableAllProjectMcpServers": true,
