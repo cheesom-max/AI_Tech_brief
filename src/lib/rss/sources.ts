@@ -3,11 +3,11 @@ import type { RSSSource } from '@/types';
 export const RSS_SOURCES: RSSSource[] = [
   // Big Tech Engineering Blogs
   {
-    id: 'netflix',
-    name: 'Netflix Tech',
-    url: 'https://netflixtechblog.com/feed',
+    id: 'spotify',
+    name: 'Spotify Engineering',
+    url: 'https://engineering.atspotify.com/feed/',
     category: 'company',
-    icon: 'play_circle',
+    icon: 'music_note',
   },
   {
     id: 'uber',

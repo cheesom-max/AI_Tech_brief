@@ -12,10 +12,10 @@ interface NewsCardProps {
 // Source-specific styles with gradients and icons
 const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: string }> = {
   // Big Tech Engineering
-  netflix: {
-    gradient: 'from-red-600/20 to-red-500/10',
-    icon: '🎬',
-    iconBg: 'bg-red-600/20',
+  spotify: {
+    gradient: 'from-green-500/20 to-green-400/10',
+    icon: '🎵',
+    iconBg: 'bg-green-500/20',
   },
   uber: {
     gradient: 'from-gray-800/20 to-gray-600/10',

@@ -12,7 +12,7 @@ interface HeroNewsProps {
 // Source-specific styles
 const sourceStyles: Record<string, { gradient: string; icon: string }> = {
   // Big Tech Engineering
-  netflix: { gradient: 'from-red-600/30 to-red-500/10', icon: '🎬' },
+  spotify: { gradient: 'from-green-500/30 to-green-400/10', icon: '🎵' },
   uber: { gradient: 'from-gray-800/30 to-gray-600/10', icon: '🚗' },
   google: { gradient: 'from-blue-500/30 to-indigo-500/10', icon: '🔬' },
   meta: { gradient: 'from-blue-600/30 to-cyan-500/10', icon: '👨‍💻' },

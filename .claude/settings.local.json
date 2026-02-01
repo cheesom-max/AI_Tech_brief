@@ -48,7 +48,9 @@
       "WebFetch(domain:research.google)",
       "WebFetch(domain:engineering.fb.com)",
       "WebFetch(domain:github.blog)",
-      "WebFetch(domain:aws.amazon.com)"
+      "WebFetch(domain:aws.amazon.com)",
+      "WebFetch(domain:engineering.atspotify.com)",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   },
   "enableAllProjectMcpServers": true,
