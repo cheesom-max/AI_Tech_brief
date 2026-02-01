@@ -3,42 +3,43 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState<boolean | null>(null);
 
   useEffect(() => {
-    // Check initial theme
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    } else if (savedTheme === 'light') {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      // Default to dark mode as per spec
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    }
+    // Sync state with actual DOM class (set by blocking script)
+    const hasDarkClass = document.documentElement.classList.contains('dark');
+    setIsDark(hasDarkClass);
   }, []);
 
   const toggleTheme = () => {
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDark(false);
-    } else {
+    const newIsDark = !isDark;
+
+    if (newIsDark) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
-      setIsDark(true);
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
+
+    setIsDark(newIsDark);
   };
+
+  // Don't render button until we know the current theme (prevents hydration mismatch)
+  if (isDark === null) {
+    return (
+      <div className="p-2 w-10 h-10" aria-hidden="true">
+        <span className="material-symbols-outlined text-text-secondary opacity-0">
+          light_mode
+        </span>
+      </div>
+    );
+  }
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg hover:bg-text-secondary/10 transition-colors"
+      className="p-2 rounded-lg hover:bg-text-secondary/10 transition-colors active:scale-95"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       <span className="material-symbols-outlined text-text-secondary">
