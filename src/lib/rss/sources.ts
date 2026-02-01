@@ -1,65 +1,7 @@
 import type { RSSSource } from '@/types';
 
 export const RSS_SOURCES: RSSSource[] = [
-  // Big Tech Engineering Blogs
-  {
-    id: 'spotify',
-    name: 'Spotify Engineering',
-    url: 'https://engineering.atspotify.com/feed/',
-    category: 'company',
-    icon: 'music_note',
-  },
-  {
-    id: 'uber',
-    name: 'Uber Engineering',
-    url: 'https://www.uber.com/en-US/blog/engineering/rss/',
-    category: 'company',
-    icon: 'local_taxi',
-  },
-  {
-    id: 'google',
-    name: 'Google Research',
-    url: 'https://research.google/blog/rss',
-    category: 'company',
-    icon: 'science',
-  },
-  {
-    id: 'meta',
-    name: 'Meta Engineering',
-    url: 'https://engineering.fb.com/feed/',
-    category: 'company',
-    icon: 'code',
-  },
-  // AI & ML Implementation
-  {
-    id: 'huggingface',
-    name: 'Hugging Face',
-    url: 'https://huggingface.co/blog/feed.xml',
-    category: 'company',
-    icon: 'sentiment_satisfied',
-  },
-  {
-    id: 'openai',
-    name: 'OpenAI',
-    url: 'https://openai.com/blog/rss.xml',
-    category: 'company',
-    icon: 'smart_toy',
-  },
-  {
-    id: 'mlmastery',
-    name: 'ML Mastery',
-    url: 'https://machinelearningmastery.com/feed/',
-    category: 'media',
-    icon: 'school',
-  },
-  {
-    id: 'aws',
-    name: 'AWS ML Blog',
-    url: 'https://aws.amazon.com/blogs/machine-learning/feed/',
-    category: 'media',
-    icon: 'cloud',
-  },
-  // Developer Community
+  // 1. Developer Trends
   {
     id: 'hackernews',
     name: 'Hacker News',
@@ -67,12 +9,77 @@ export const RSS_SOURCES: RSSSource[] = [
     category: 'media',
     icon: 'trending_up',
   },
+  // 2. AI Frontier
+  {
+    id: 'openai',
+    name: 'OpenAI',
+    url: 'https://openai.com/blog/rss.xml',
+    category: 'company',
+    icon: 'smart_toy',
+  },
+  // 3. Research
+  {
+    id: 'google',
+    name: 'Google Research',
+    url: 'https://research.google/blog/rss',
+    category: 'company',
+    icon: 'science',
+  },
+  // 4. Core Frameworks
+  {
+    id: 'meta',
+    name: 'Meta Engineering',
+    url: 'https://engineering.fb.com/feed/',
+    category: 'company',
+    icon: 'code',
+  },
+  // 5. Open Source AI/ML
+  {
+    id: 'huggingface',
+    name: 'Hugging Face',
+    url: 'https://huggingface.co/blog/feed.xml',
+    category: 'company',
+    icon: 'sentiment_satisfied',
+  },
+  // 6. Open Source Ecosystem
   {
     id: 'github',
     name: 'GitHub Blog',
     url: 'https://github.blog/feed/',
     category: 'media',
     icon: 'hub',
+  },
+  // 7. System Architecture
+  {
+    id: 'spotify',
+    name: 'Spotify Engineering',
+    url: 'https://engineering.atspotify.com/feed/',
+    category: 'company',
+    icon: 'music_note',
+  },
+  // 8. Real-time Data
+  {
+    id: 'uber',
+    name: 'Uber Engineering',
+    url: 'https://www.uber.com/en-US/blog/engineering/rss/',
+    category: 'company',
+    icon: 'local_taxi',
+  },
+  // 9. Cloud ML
+  {
+    id: 'aws',
+    name: 'AWS ML Blog',
+    url: 'https://aws.amazon.com/blogs/machine-learning/feed/',
+    category: 'media',
+    icon: 'cloud',
+  },
+  // 10. Tutorials
+  {
+    id: 'mlmastery',
+    name: 'ML Mastery',
+    url: 'https://machinelearningmastery.com/feed/',
+    category: 'media',
+    icon: 'school',
   },
 ];
 
