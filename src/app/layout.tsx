@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="dark">
       <head>
+        <meta name="google-site-verification" content="SLb2alCB2Rw__kwtk1doAZENvubcsvtCTfBpIAIiazE" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086353762859364"
