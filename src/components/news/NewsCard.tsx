@@ -21,45 +21,45 @@ const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: str
     icon: '🤖',
     iconBg: 'bg-emerald-500/20',
   },
-  deepmind: {
-    gradient: 'from-purple-500/20 to-pink-500/10',
-    icon: '🧠',
-    iconBg: 'bg-purple-500/20',
+  google: {
+    gradient: 'from-blue-500/20 to-indigo-500/10',
+    icon: '🔍',
+    iconBg: 'bg-blue-500/20',
   },
   huggingface: {
     gradient: 'from-yellow-500/20 to-orange-500/10',
     icon: '🤗',
     iconBg: 'bg-yellow-500/20',
   },
-  nvidia: {
-    gradient: 'from-green-500/20 to-lime-500/10',
-    icon: '💻',
-    iconBg: 'bg-green-500/20',
+  bair: {
+    gradient: 'from-blue-600/20 to-cyan-500/10',
+    icon: '🔬',
+    iconBg: 'bg-blue-600/20',
   },
-  techcrunch: {
-    gradient: 'from-green-600/20 to-emerald-500/10',
+  aheadofai: {
+    gradient: 'from-purple-500/20 to-pink-500/10',
+    icon: '🧠',
+    iconBg: 'bg-purple-500/20',
+  },
+  ainews: {
+    gradient: 'from-sky-500/20 to-blue-500/10',
     icon: '📰',
-    iconBg: 'bg-green-600/20',
+    iconBg: 'bg-sky-500/20',
   },
-  verge: {
-    gradient: 'from-pink-500/20 to-rose-500/10',
-    icon: '🌐',
-    iconBg: 'bg-pink-500/20',
+  kdnuggets: {
+    gradient: 'from-indigo-500/20 to-violet-500/10',
+    icon: '📊',
+    iconBg: 'bg-indigo-500/20',
+  },
+  tds: {
+    gradient: 'from-teal-500/20 to-emerald-500/10',
+    icon: '📈',
+    iconBg: 'bg-teal-500/20',
   },
   venturebeat: {
     gradient: 'from-red-500/20 to-orange-500/10',
-    icon: '📈',
+    icon: '🚀',
     iconBg: 'bg-red-500/20',
-  },
-  mit: {
-    gradient: 'from-red-600/20 to-rose-500/10',
-    icon: '🎓',
-    iconBg: 'bg-red-600/20',
-  },
-  wired: {
-    gradient: 'from-gray-500/20 to-slate-500/10',
-    icon: '🔌',
-    iconBg: 'bg-gray-500/20',
   },
   default: {
     gradient: 'from-primary/20 to-primary/5',
