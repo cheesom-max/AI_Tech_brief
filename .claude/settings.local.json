@@ -40,7 +40,15 @@
       "WebFetch(domain:magazine.sebastianraschka.com)",
       "WebFetch(domain:www.artificialintelligence-news.com)",
       "WebFetch(domain:www.kdnuggets.com)",
-      "WebFetch(domain:towardsdatascience.com)"
+      "WebFetch(domain:towardsdatascience.com)",
+      "WebFetch(domain:thegradient.pub)",
+      "WebFetch(domain:netflixtechblog.com)",
+      "WebFetch(domain:www.uber.com)",
+      "WebFetch(domain:machinelearningmastery.com)",
+      "WebFetch(domain:research.google)",
+      "WebFetch(domain:engineering.fb.com)",
+      "WebFetch(domain:github.blog)",
+      "WebFetch(domain:aws.amazon.com)"
     ]
   },
   "enableAllProjectMcpServers": true,

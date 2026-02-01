@@ -20,7 +20,7 @@ const sourceStyles: Record<string, { gradient: string; icon: string }> = {
   huggingface: { gradient: 'from-yellow-500/30 to-orange-500/10', icon: '🤗' },
   openai: { gradient: 'from-emerald-500/30 to-teal-500/10', icon: '🤖' },
   mlmastery: { gradient: 'from-purple-500/30 to-pink-500/10', icon: '🎓' },
-  gradient: { gradient: 'from-indigo-500/30 to-violet-500/10', icon: '📊' },
+  aws: { gradient: 'from-orange-500/30 to-yellow-500/10', icon: '☁️' },
   // Developer Community
   hackernews: { gradient: 'from-orange-500/30 to-amber-500/10', icon: '🔥' },
   github: { gradient: 'from-gray-600/30 to-gray-500/10', icon: '🐙' },

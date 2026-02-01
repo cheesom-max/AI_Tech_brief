@@ -48,10 +48,10 @@ const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: str
     icon: '🎓',
     iconBg: 'bg-purple-500/20',
   },
-  gradient: {
-    gradient: 'from-indigo-500/20 to-violet-500/10',
-    icon: '📊',
-    iconBg: 'bg-indigo-500/20',
+  aws: {
+    gradient: 'from-orange-500/20 to-yellow-500/10',
+    icon: '☁️',
+    iconBg: 'bg-orange-500/20',
   },
   // Developer Community
   hackernews: {

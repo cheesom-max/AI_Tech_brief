@@ -53,11 +53,11 @@ export const RSS_SOURCES: RSSSource[] = [
     icon: 'school',
   },
   {
-    id: 'gradient',
-    name: 'The Gradient',
-    url: 'https://thegradient.pub/rss/',
+    id: 'aws',
+    name: 'AWS ML Blog',
+    url: 'https://aws.amazon.com/blogs/machine-learning/feed/',
     category: 'media',
-    icon: 'insights',
+    icon: 'cloud',
   },
   // Developer Community
   {
