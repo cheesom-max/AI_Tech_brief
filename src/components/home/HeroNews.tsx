@@ -11,7 +11,7 @@ interface HeroNewsProps {
 
 // Source-specific styles (matches sources.ts)
 const sourceStyles: Record<string, { gradient: string; icon: string }> = {
-  anthropic: { gradient: 'from-orange-500/30 to-amber-500/10', icon: '✨' },
+  anthropic: { gradient: 'from-orange-500/30 to-amber-500/10', icon: '🔶' },
   openai: { gradient: 'from-emerald-500/30 to-teal-500/10', icon: '🤖' },
   deepmind: { gradient: 'from-purple-500/30 to-pink-500/10', icon: '🧠' },
   huggingface: { gradient: 'from-yellow-500/30 to-orange-500/10', icon: '🤗' },

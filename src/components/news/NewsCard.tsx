@@ -13,7 +13,7 @@ interface NewsCardProps {
 const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: string }> = {
   anthropic: {
     gradient: 'from-orange-500/20 to-amber-500/10',
-    icon: '✨',
+    icon: '🔶',
     iconBg: 'bg-orange-500/20',
   },
   openai: {
