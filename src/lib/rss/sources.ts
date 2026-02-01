@@ -65,21 +65,21 @@ export const RSS_SOURCES: RSSSource[] = [
     category: 'media',
     icon: 'hub',
   },
-  // 7. System Architecture
+  // 7. Technical Community
   {
-    id: 'spotify',
-    name: 'Spotify Engineering',
-    url: 'https://engineering.atspotify.com/feed/',
-    category: 'company',
-    icon: 'music_note',
+    id: 'lobsters',
+    name: 'Lobsters',
+    url: 'https://lobste.rs/rss',
+    category: 'media',
+    icon: 'forum',
   },
-  // 8. Real-time Data
+  // 8. ML Papers + Code
   {
-    id: 'uber',
-    name: 'Uber Engineering',
-    url: 'https://www.uber.com/en-US/blog/engineering/rss/',
-    category: 'company',
-    icon: 'local_taxi',
+    id: 'paperswithcode',
+    name: 'Papers With Code',
+    url: 'https://paperswithcode.com/rss',
+    category: 'media',
+    icon: 'science',
   },
   // 9. Cloud ML
   {

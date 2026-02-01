@@ -11,16 +11,16 @@ interface NewsCardProps {
 
 // Source-specific styles with gradients and icons
 const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: string }> = {
-  // Big Tech Engineering
-  spotify: {
-    gradient: 'from-green-500/20 to-green-400/10',
-    icon: '🎵',
-    iconBg: 'bg-green-500/20',
+  // Technical Community & Papers
+  lobsters: {
+    gradient: 'from-red-500/20 to-rose-400/10',
+    icon: '🦞',
+    iconBg: 'bg-red-500/20',
   },
-  uber: {
-    gradient: 'from-gray-800/20 to-gray-600/10',
-    icon: '🚗',
-    iconBg: 'bg-gray-800/20',
+  paperswithcode: {
+    gradient: 'from-cyan-500/20 to-blue-500/10',
+    icon: '📊',
+    iconBg: 'bg-cyan-500/20',
   },
   google: {
     gradient: 'from-blue-500/20 to-indigo-500/10',
