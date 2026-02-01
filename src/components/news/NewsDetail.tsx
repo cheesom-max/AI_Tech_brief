@@ -45,17 +45,6 @@ export default function NewsDetail({ news }: NewsDetailProps) {
       {/* AI Insight */}
       <AIInsight insight={news.insight} />
 
-      {/* Content */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-text-primary mb-3 flex items-center gap-2">
-          <span className="material-symbols-outlined text-primary">article</span>
-          Original Content
-        </h2>
-        <div className="prose prose-sm dark:prose-invert max-w-none">
-          <p className="text-text-secondary whitespace-pre-wrap">{news.content}</p>
-        </div>
-      </div>
-
       {/* Original Link */}
       <a
         href={news.originalUrl}
