@@ -15,21 +15,17 @@ export const viewport: Viewport = {
 };
 
 // Inline script to set theme before hydration (prevents flash)
+// Server renders with 'dark' class by default, script removes it if user prefers light
 const themeScript = `
   (function() {
     try {
       var theme = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
       if (theme === 'light') {
         document.documentElement.classList.remove('dark');
-      } else if (theme === 'dark' || prefersDark) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.add('dark');
       }
+      // If theme is 'dark' or not set, keep the default 'dark' class from server
     } catch (e) {
-      document.documentElement.classList.add('dark');
+      // Keep dark mode on error
     }
   })();
 `;
@@ -40,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
+    <html lang="ko" className="dark" suppressHydrationWarning>
       <head>
         {/* Theme script - must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
