@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import BottomNav from '@/components/layout/BottomNav';
@@ -21,6 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="dark">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9086353762859364"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className="bg-background text-text-primary min-h-screen">
         <div className="max-w-md mx-auto min-h-screen flex flex-col">
           <Header />
