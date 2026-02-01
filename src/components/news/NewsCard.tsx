@@ -9,8 +9,9 @@ interface NewsCardProps {
   news: News;
 }
 
-// Source-specific styles with gradients and icons (matches sources.ts)
+// Source-specific styles with gradients and icons
 const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: string }> = {
+  // New sources
   anthropic: {
     gradient: 'from-orange-500/20 to-amber-500/10',
     icon: '🔶',
@@ -60,6 +61,37 @@ const sourceStyles: Record<string, { gradient: string; icon: string; iconBg: str
     gradient: 'from-red-500/20 to-orange-500/10',
     icon: '🚀',
     iconBg: 'bg-red-500/20',
+  },
+  // Legacy sources (for existing news data)
+  deepmind: {
+    gradient: 'from-purple-500/20 to-pink-500/10',
+    icon: '🧠',
+    iconBg: 'bg-purple-500/20',
+  },
+  nvidia: {
+    gradient: 'from-green-500/20 to-lime-500/10',
+    icon: '💻',
+    iconBg: 'bg-green-500/20',
+  },
+  techcrunch: {
+    gradient: 'from-green-600/20 to-emerald-500/10',
+    icon: '📰',
+    iconBg: 'bg-green-600/20',
+  },
+  verge: {
+    gradient: 'from-pink-500/20 to-rose-500/10',
+    icon: '⚡',
+    iconBg: 'bg-pink-500/20',
+  },
+  mit: {
+    gradient: 'from-red-600/20 to-rose-500/10',
+    icon: '🎓',
+    iconBg: 'bg-red-600/20',
+  },
+  wired: {
+    gradient: 'from-gray-500/20 to-slate-500/10',
+    icon: '🔌',
+    iconBg: 'bg-gray-500/20',
   },
   default: {
     gradient: 'from-primary/20 to-primary/5',
