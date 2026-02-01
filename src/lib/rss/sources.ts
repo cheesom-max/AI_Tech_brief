@@ -5,7 +5,7 @@ export const RSS_SOURCES: RSSSource[] = [
   {
     id: 'hackernews',
     name: 'Hacker News',
-    url: 'https://news.ycombinator.com/rss',
+    url: 'https://hnrss.org/frontpage',
     category: 'media',
     icon: 'trending_up',
   },
